@@ -43,7 +43,7 @@
     <header class="sticky top-0 z-10 bg-white bg-opacity-60 backdrop:blur-lg">
       <div class="navbar">
         <div class="navbar-start">
-          <button class="btn bg-buttonP">Blog</button>
+          <button id="blog" class="btn bg-buttonP">Blog</button>
         </div>
         <div class="navbar-center">
           <a class="btn btn-ghost text-xl">
@@ -133,5 +133,10 @@ element.style.fontSize = '20px';  </code></p>
     </main>
   </div>
   <script src="./JS/blog.js"></script>
+  <script>
+    document.getElementById('blog').addEventListener('click', function() {
+        window.location.href = 'index.html'; // Redirects to blog.html
+    });
+  </script>
 </body>
 </html>
