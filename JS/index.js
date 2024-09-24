@@ -35,41 +35,57 @@ document.getElementById('Quota-donate').addEventListener('click',function(){
   donoAddToHistory('Quota-donate');
 })
 // common function 1
-function donating(donatetype){
-  let donation,budget,addedDono,addedDonationtype;
-  budget=parseFloat(document.getElementById('budget').innerText);
-  if(donatetype=='feni-donate'){
-    donation=parseFloat(document.getElementById('feni-in').value);
-    addedDono=parseFloat(document.getElementById('dff-num').innerText)      
-    addedDonationtype='dff-num';
-    }
-  else if(donatetype == 'noakhali-donate' ){
-    donation=parseFloat(document.getElementById('noakhali-in').value);
-    addedDono=parseFloat(document.getElementById('dfn-num').innerText);
-    addedDonationtype='dfn-num';
-    }
-  else if(donatetype=='Quota-donate'){
-    donation=parseFloat(document.getElementById('quota-in').value);
-    addedDono=parseFloat(document.getElementById('aid-num').innerText)   ;
-    addedDonationtype='aid-num';
-    }
-    else{
-      alert('something is wrong');
-    }
-  if(!isNaN(donation)&&isFinite(donation) && donation > 0){
-  if(budget>donation){
-    let newBudget=budget-donation;
-    document.getElementById('budget').innerText=newBudget;
-    addedDono+=donation;
-    document.getElementById(addedDonationtype).innerText=addedDono;
-  }else{
+function donating(donatetype) {
+  let donation, budget, addedDono, addedDonationtype;
+  budget = parseFloat(document.getElementById('budget').innerText);
+
+  if (donatetype === 'feni-donate') {
+    donation = parseFloat(document.getElementById('feni-in').value);
+    addedDono = parseFloat(document.getElementById('dff-num').innerText);
+    addedDonationtype = 'dff-num';
+  } else if (donatetype === 'noakhali-donate') {
+    donation = parseFloat(document.getElementById('noakhali-in').value);
+    addedDono = parseFloat(document.getElementById('dfn-num').innerText);
+    addedDonationtype = 'dfn-num';
+  } else if (donatetype === 'Quota-donate') {
+    donation = parseFloat(document.getElementById('quota-in').value);
+    addedDono = parseFloat(document.getElementById('aid-num').innerText);
+    addedDonationtype = 'aid-num';
+  } 
+
+  if (!isNaN(donation) && isFinite(donation) && donation > 0) {
+    if (budget > donation) {
+      let newBudget = budget - donation;
+      document.getElementById('budget').innerText = newBudget;
+      addedDono += donation;
+      document.getElementById(addedDonationtype).innerText = addedDono;
+
+      // Create and insert the modal into the DOM
+      const modal = `
+Donation Successful!<br>Your donation of ${donation} BDT has been processed.<br> Thank you!
+        `;
+      alert(modal);
+      // Ensure modal is inserted before trying to show it
+      document.body.insertAdjacentHTML('beforeend', modal);
+
+      // Get the modal element and show it
+      const dialog = document.getElementById('my_modal_2');
+      if (dialog) {
+        dialog.showModal();
+
+        // Automatically remove modal when it closes
+        dialog.addEventListener('close', function() {
+          dialog.remove();
+        });
+      }
+    } else {
       alert("You're exceeding your budget. Please check the donation amount.");
     }
-  }
-  else{
-    alert('not a valid number');  
+  } else {
+    alert('Not a valid number');
   }
 }
+
 // common function()2:
 function donoAddToHistory(donotype){
   let donation,addedDonationtype;
