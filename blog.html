@@ -1,142 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <!--DailyUi and talwind css-->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: 'rgb(255,255,255)',
-            secondary: 'rgba(255,255,255,50%)',
-            buttonP: 'rgb(171,239,93)',
-            buttonS: 'rgba(171,239,93,50%)',
-            primaryBlack:'rgb(24,24,24)',
-            card1: 'rgb(230, 193, 211)',
-            card2: 'rgb(240, 218, 110)',
-            card3: 'rgb(160, 218, 190)',
-            card4: 'rgb(120, 170, 230)',
-            footerDesc: 'rgb(115, 115, 115)',
-            golden:'rgb(255, 215, 0)',
-          },
-          fontFamily: {
-            lexend: ['Lexend','sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- font awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- google font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+ <!--DailyUi and talwind css-->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+ tailwind.config = {
+  theme: {
+  extend: {
+   colors: {
+   primary: 'rgb(255,255,255)',
+   secondary: 'rgba(255,255,255,50%)',
+   buttonP: 'rgb(171,239,93)',
+   buttonS: 'rgba(171,239,93,50%)',
+   primaryBlack:'rgb(24,24,24)',
+   card1: 'rgb(230, 193, 211)',
+   card2: 'rgb(240, 218, 110)',
+   card3: 'rgb(160, 218, 190)',
+   card4: 'rgb(120, 170, 230)',
+   footerDesc: 'rgb(115, 115, 115)',
+   golden:'rgb(255, 215, 0)',
+   },
+   fontFamily: {
+   lexend: ['Lexend','sans-serif'],
+   },
+  },
+  },
+ };
+ </script>
 </head>
 <body class="font-lexend bg-base-100 m-0 p-0">
-  <div class="lg:w-10/12 mx-auto">
-    <header class="sticky top-0 z-10 bg-white bg-opacity-60 backdrop:blur-lg">
-      <div class="navbar">
-        <div class="navbar-start">
-          <button id="blog" class="btn bg-buttonP">Blog</button>
-        </div>
-        <div class="navbar-center">
-          <a class="btn btn-ghost text-xl">
-            <img src="./assets/logo.png" alt="Logo">
-            <p class="font-semibold text-xl">Donate Bangladesh</p>
-          </a>
-        </div>
-        <div class="navbar-end text-sm lg:text-xl">
-          <i class="fa-solid fa-circle-dollar-to-slot text-golden m-5"></i>
-          <span class="mr-2">10000</span>
-          <span>BDT</span>
-        </div>
-      </div>
-      <section class="text-center m-5 ">
-        <button class="btn btn-active bg-buttonP active:bg-buttonP disabled:bg-ghost">Donation</button>
-        <button class="btn active:bg-buttonP">History</button>
-      </section>
-    </header>
-    <main class="grid gap-5">
-      <div class="card bg-base-100  shadow-xl">
-        <div class="card-body">
-          <p>1. What is the Document Object Model (DOM)? 
-            <button id="first-q" class="btn btn-circle">
-            <i class="fa-solid fa-caret-down"></i>
-            </button>
-          </p>
-          <p>DOM or Document Object Model is a way for JS to make the website more dynamic by being interactive.<br> It illutrates the structure of the webpage as a tree of objects, where every part is a object of that page.<br>It makes obtaining the parts easier.  </p>
-        </div>
-      </div>
-      <div class="card bg-base-100  shadow-xl">
-        <div class="card-body">
-          <p>2. How do you select an element from the DOM?
-          <button id="second-q" class="btn btn-circle">
-            <i class="fa-solid fa-caret-down"></i>
-            </button></p>
-          <p>Select An Element From The DOM:<br>
-            We can select an element by mostly 4 methods:<br>
-          1.Select By Id: Use document.getElementById() to select a single element with a specific id.<br>
-          2.Select By Class-Name: Ue document.getElementsByClassName() to select all elements with a specific class.<br>
-          3.Select By Tag-Name: Use document.getElementsByTagName() to select all elements with a specific tag name.<br>
-          4.Select By CSS-selectors:
-          document.querySelector() to select the first element that matches a specified CSS selector, or document.<br>querySelectorAll() to select all matching elements.
-            </p>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-        <p>3. What is event delegation in the context of the DOM, and why is it useful?
-          <button id="third-q" class="btn btn-circle">
-            <i class="fa-solid fa-caret-down"></i>
-          </button></p>
-        <p>Event delegation:
-          Event delagation is the way of handling events which is used for attaching a listener to parent instead of their children .<br> It hears all event and gives appropriate results.
-          An example:
-          <code><pre>document.getElementById('parent-list').addEventListener('click', function(event) {
-            if (event.target.tagName === 'LI') {
-                alert('You clicked on ' + event.target.textContent);
-            }
-        });</pre>
-        </code>
-        Why is it useful?
-Less code: 
-You only need one event listener on the parent element, instead of adding listeners to each button, link, or item.<br>
-Better performance: Attaching many listeners can slow down the webpage. Event delegation uses just one listener for multiple elements, so the page runs faster.<br>
-Handles new elements: If new elements are added dynamically (after the page loads), the parent can still detect events on them, without adding extra listeners.
-        </p>
-        </div>
-      </div>
-      <div class="card bg-base-100  shadow-xl">
-        <div class="card-body">
-          <p>4. How do you manipulate an element's attributes and styles using the DOM?
-          <button id="forth-q" class="btn btn-circle">
-            <i class="fa-solid fa-caret-down"></i>
-          </button></p>
-          <p>You can manipulate an element's attributes and styles using the DOM in these simple ways:<br>
-            1. Change an attribute
-            Use the .setAttribute() method or directly access the attribute.<br>setAttribute('src', 'newImage.jpg');
-            
-            element.href = 'https://example.com';
-            2. Change the style
-Modify the style property of the element.<br> <code>element.style.color = 'red';
-element.style.backgroundColor = 'blue';  
-element.style.fontSize = '20px';  </code></p>
-        </div>
-      </div>
-      
-    </main>
+ <div class="lg:w-10/12 mx-auto">
+ <header class="sticky top-0 z-10 bg-white bg-opacity-60 backdrop:blur-lg">
+  <div class="navbar">
+  <div class="navbar-start">
+   <button id="blog" class="btn bg-buttonP">Blog</button>
   </div>
-  <script src="./JS/blog.js"></script>
-  <script>
-    document.getElementById('blog').addEventListener('click', function() {
-        window.location.href = 'index.html'; // Redirects to blog.html
-    });
-  </script>
+  <div class="navbar-center">
+   <a class="btn btn-ghost text-xl">
+   <img src="./assets/logo.png" alt="Logo">
+   <p class="font-semibold text-xl">Donate Bangladesh</p>
+   </a>
+  </div>
+  <div class="navbar-end text-sm lg:text-xl">
+   <i class="fa-solid fa-circle-dollar-to-slot text-golden m-5"></i>
+   <span class="mr-2">10000</span>
+   <span>BDT</span>
+  </div>
+  </div>
+  <!-- <section class="text-center m-5 ">
+  <button class="btn btn-active bg-buttonP active:bg-buttonP disabled:bg-ghost">Donation</button>
+  <button class="btn active:bg-buttonP">History</button>
+  </section> -->
+ </header>
+ <main class="gap-5">
+  <div class="card w-full lg:max-w-screen-lg lg:p-5 mx-auto bg-base-100 h-auto shadow-xl lg:m-5">
+  <div class="card-body">
+   <p class="text-lg font-bold">1. What is the Document Object Model (DOM)? 
+   </p>
+   <p>DOM or Document Object Model is a way for JS to make the website more dynamic by being interactive. It illutrates the structure of the webpage as a tree of objects, where every part is a object of that page. It makes obtaining the parts easier. </p>
+  </div>
+  </div>
+  <div class="card w-full lg:max-w-screen-lg lg:p-5 mx-auto bg-base-100 h-auto shadow-xl lg:m-5">
+  <div class="card-body">
+   <p class="text-lg font-bold">2. How do you select an element from the DOM?</p>
+   <p ><span class="font-bold">Select An Element From The DOM:</span><br> 
+   We can select an element by mostly 4 methods: <br> 
+   <span class="font-bold">1.Select By Id:</span> <br> Use document.getElementById() to select a single element with a specific id.<br> 
+   <span class="font-bold">2.Select By Class-Name:</span> <br> Use document.getElementsByClassName() to select all elements with a specific class.<br> 
+   <span class="font-bold">3.Select By Tag-Name:</span> <br> Use document.getElementsByTagName() to select all elements with a specific tag name. <br>
+   <span class="font-bold">4.Select By CSS-selectors:</span> <br>
+   Use document.querySelector() to select the first element that matches a specified CSS selector, or document. querySelectorAll() to select all matching elements.
+   </p>
+  </div>
+  </div>
+  <div class="card w-full lg:max-w-screen-lg lg:p-5 mx-auto bg-base-100 h-auto shadow-xl lg:m-5">
+  <div class="card-body">
+  <p class="text-lg font-bold">3. What is event delegation in the context of the DOM, and why is it useful?</p>
+  <p>Event delegation:
+   Event delagation is the way of handling events which is used for attaching a listener to parent instead of their children . It hears all event and gives appropriate results.
+   An example:
+   <code>document.getElementById('parent-list').addEventListener('click', function(event) {
+   if (event.target.tagName === 'LI') {
+    alert('You clicked on ' + event.target.textContent);
+   }
+  });
+  </code>
+  Why is it useful?
+Less code: 
+You only need one event listener on the parent element, instead of adding listeners to each button, link, or item. 
+Better performance: Attaching many listeners can slow down the webpage. Event delegation uses just one listener for multiple elements, so the page runs faster. 
+Handles new elements: If new elements are added dynamically (after the page loads), the parent can still detect events on them, without adding extra listeners.
+  </p>
+  </div>
+  </div>
+  <div class="card w-full lg:max-w-screen-lg lg:p-5 mx-auto bg-base-100 h-auto shadow-xl lg:m-5">
+  <div class="card-body">
+   <p class="text-lg font-bold">4. How do you manipulate an element's attributes and styles using the DOM?</p>
+   <p>You can manipulate an element's attributes and styles using the DOM in these simple ways: 
+   1. Change an attribute
+   Use the .setAttribute() method or directly access the attribute.setAttribute('src', 'newImage.jpg'); 
+   <code>
+   element.href = 'https://example.com';</code>
+   2. Change the style
+Modify the style property of the <code>
+element.element.style.color = 'red';
+element.style.backgroundColor = 'blue'; 
+element.style.fontSize = '20px'; </code>
+  </div>
+  </div>
+  
+ </main>
+ </div>
+ <script src="./JS/blog.js"></script>
+ <script>
+ document.getElementById('blog').addEventListener('click', function() {
+  window.location.href = 'index.html'; // Redirects to blog.html
+ });
+ </script>
 </body>
 </html>
